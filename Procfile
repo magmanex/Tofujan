@@ -1,1 +1,1 @@
-web: gunicorn tofujan.wsgi
+web: gunicorn Tofujan.wsgi
