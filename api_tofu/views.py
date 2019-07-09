@@ -45,7 +45,8 @@ class TutorialBotView(View):
 
         msg = "test"
         self.send_message(msg, t_chat["id"])
-        return HttpResponse("ok")
+        # return HttpResponse("ok")
+        return JsonResponse({"ok": "POST request processed"})
 
     @staticmethod
     def send_message(message, chat_id):
@@ -59,7 +60,6 @@ class TutorialBotView(View):
             f"{TELEGRAM_URL}{bot_token}/sendMessage", data=data
         )
         print(response  )
-    return JsonResponse({"ok": "POST request processed"})
 # @bot.message_handler(commands=['start'])
 # def send_welcome(message):
 #     bot.reply_to(message, "Testt")
