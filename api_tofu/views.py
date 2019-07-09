@@ -59,6 +59,7 @@ class TutorialBotView(View):
             f"{TELEGRAM_URL}{bot_token}/sendMessage", data=data
         )
         print(response  )
+    return JsonResponse({"ok": "POST request processed"})
 # @bot.message_handler(commands=['start'])
 # def send_welcome(message):
 #     bot.reply_to(message, "Testt")
