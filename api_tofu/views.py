@@ -41,10 +41,10 @@ class TutorialBotView(View):
         t_data = json.loads(request.body)
         print(t_data)
         t_message = t_data.get('message')
-        t_chat = t_data.get('chat')
+        t_chat = t_message.get('chat')
 
         msg = "test"
-        self.send_message(msg, t_chat["id"])
+        self.send_message(msg, t_chat.get("id"))
         # return HttpResponse("ok")
         return JsonResponse({"ok": "POST request processed"})
 
