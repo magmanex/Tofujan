@@ -39,7 +39,7 @@ def index(request):
 class TutorialBotView(View):
     def post(self, request, *args, **kwargs):
         t_data = json.loads(request.body)
-        print(type(t_data))
+        print(t_data)
         t_message = t_data.get('message')
         t_chat = t_data.get('chat')
 
